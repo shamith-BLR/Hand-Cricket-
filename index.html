@@ -1,1 +1,64 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Classroom Hand Cricket</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2f4a3a">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+
+  <section id="home" class="screen active">
+    <h1>Classroom Hand Cricket</h1>
+    <div class="shelf" aria-label="Trophies">🏆 <span id="trophyCount">0</span> trophies</div>
+    <label>Your name <input id="playerName" maxlength="14"></label>
+    <label>Opponent name <input id="cpuName" maxlength="14"></label>
+    <button class="big" id="startBtn">Start toss</button>
+  </section>
+
+  <section id="toss" class="screen">
+    <h2 id="tossTitle">Call the toss</h2>
+    <div id="coin">🪙</div>
+    <div class="row" id="tossChoices">
+      <button class="big" data-call="Heads">Heads</button>
+      <button class="big" data-call="Tails">Tails</button>
+    </div>
+    <div class="row hidden" id="batBowl">
+      <button class="big" data-pick="bat">Bat first</button>
+      <button class="big" data-pick="bowl">Bowl first</button>
+    </div>
+    <p id="tossMsg"></p>
+  </section>
+
+  <section id="game" class="screen">
+    <div class="board">
+      <div id="inningsInfo"></div>
+      <div id="score">0</div>
+      <div id="target"></div>
+    </div>
+    <div class="classroom">
+      <div id="cpuLabel" class="name"></div>
+      <div id="face">😐</div>
+      <div class="bench"></div>
+      <div class="hands"><span id="cpuHand">✋</span><span id="myHand">✋</span></div>
+    </div>
+    <p id="msg">Pick a number</p>
+    <div class="pad" id="pad"></div>
+    <div id="playerLabel" class="name"></div>
+  </section>
+
+  <section id="result" class="screen">
+    <div id="resultFace">😐</div>
+    <h2 id="resultTitle"></h2>
+    <p id="resultMsg"></p>
+    <div id="token" class="hidden">🏆 Trophy token earned!</div>
+    <button class="big" id="againBtn">Play again</button>
+  </section>
+
+</main>
+<script src="game.js"></script>
+</body>
+</html>

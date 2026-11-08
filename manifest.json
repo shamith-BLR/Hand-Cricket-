@@ -1,0 +1,10 @@
+{
+  "name": "Classroom Hand Cricket",
+  "short_name": "Hand Cricket",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2f4a3a",
+  "theme_color": "#2f4a3a",
+  "icons": []
+}
